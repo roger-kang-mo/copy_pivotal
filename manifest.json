@@ -1,6 +1,6 @@
   {
     "name": "Copy Pivotal Link",
-    "version": "0.1",
+    "version": "1.0",
     "description": "Copy the pivotal story ID into the Github PR desciption",
     "manifest_version": 2,
     "permissions": [
@@ -8,8 +8,9 @@
     ],
     "content_scripts": [
       {
-        "matches": ["https://github.com/onemedical/*/compare/*"],
-        "js": ["copy_link.js"]
+        "matches": ["https://github.com/onemedical/*"],
+        "js": ["copy_link.js"],
+        "run_at": "document_end"
       }
     ]
   }
